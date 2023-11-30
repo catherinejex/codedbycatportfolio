@@ -4,88 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poiret+One&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="portfolio.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poiret+One&family=Raleway:wght@300&family=Reenie+Beanie&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poiret+One&family=Raleway:wght@300&family=Reenie+Beanie&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/def396fc89.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/def396fc89.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poiret+One&family=Raleway:wght@300&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <title>Document</title>
 </head>
 <body>
-    <div class="bckgd-port">
-        <div class="container">
-            <h1 class="glitch-portfolio">
-                <span aria-hidden="true">Portfolio</span>
-                <span aria-hidden="true">Portfolio</span>My Portfolio</h1>
-            <p class="portfolio-text">The cards below will take you to my favourite three projects I have worked on:</p>
-
-            <div class="cards">
-                <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal" id="bandmates">
-                    <div class="card-category bandmates">
-                        <img src="" alt="">
-                        <p class="text-card"></p>
-                    </div>
-                </div>
-
-                <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal" id="omnifood">
-                <div class="card-category omnifood">
-                    <img src="omnifood.jpg" alt="omnifood">
-                    <p class="text-card"></p>
-                </div>
-                </div>
-
-                <div class="" data-bs-toggle="modal" data-bs-target="#exampleModal" id="venulet">
-                <div class="card-category venulet">
-                    <img src="" alt="">
-                    <p class="text-card"></p>
-                </div>
-                </div>
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">BandMates</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Go to app</button>
-                </div>
-                </div>
-                </div>
-            </div>
-            </div>
-            <div class="link-port">
-                <ul>Other links:</ul>
-                <li><a class="cv-link" href="https://drive.google.com/file/d/15Rbu76JGWYr97hAduqVjbbdDff9TojPh/view" target="_blank">CV</a></li>
-                <li><a class="cv-link" href="https://www.instagram.com/catherinejexdesigns">Art/ Graphic Design Instagram</a></li>
-            </div>
-        </div>
-
-        <script>
-            let popup = document.getElementById("popup");
-
-            function openPopup(){
-                popup.classList.add("open-popup");
-            }
-            function closePopup(){
-                popup.classList.remove("open-popup");
-            }
-        </script>
+    <div class="topnav">
+        <ul class="nav-all">
+            <li class="topnav-list">
+                <a href="homepage.html">Home</a>
+            </li>
+            <li class="topnav-list">
+                <a href="about.html">About</a>
+            </li>
+        </ul>
     </div>
-        <div class="footer">
+    <h1 class="glitch-portfolio">
+        <span aria-hidden="true">My Portfolio</span>
+        <span aria-hidden="true">My Portfolio</span>My Portfolio</h1>
+        <p class="text">The cards below will take you to my favourite three projects I have worked on:</p>
+    <div class="container">
+            <div class="card-category omnifood">
+                <img src="omnifood.jpg" alt="omnifood" onclick='openPopup()'>
+                <p class="text-card"></p>
+            </div>
+            <div class="popup" id="popup">
+                <h2>Omnifood</h2>
+                <p>Omnifood is a mock delivery service I created to demonstrate web page responsiveness, CSS styling, and an introduction to basic JQuery features.</p>
+                <a href="https://catherinerosejex.github.io/omnifood/">Click to visit</a>
+                <button type="button" onclick="closePopup()">Close</button>
+            </div>
+
+            <div class="card-category venulet">
+                <img src="venulet.jpg" alt="venulet" onclick='openPopupVen()'>
+                <p class="text-card"></p>
+            </div>
+            <div class="popupven" id="popupven">
+                <h2>VenuLet</h2>
+                <p>VenuLet was a project created by myself and three other teammates during our "AirBnb clone week" at Le Wagon..</p>
+                <button type="button" onclick="closePopupVen()">Close</button>
+            </div>
+
+            <div class="card-category bandmates">
+                <img src="bandmates.jpg" alt="bandmates" onclick='openPopupBand()'>
+                <p class="text-card"></p>
+            </div>
+            <div class="popupband" id="popupband">
+                <h2>BandMates</h2>
+                <p>BandMates was a project created by myself and three other teammates for our final project at Le Wagon. BandMates is a mobile application for musicans to connect with other musicans within their area.</p>
+                <button type="button" onclick="closePopupBand()">Close</button>
+        </div>
+    </div>
+
+    <div class="portfolio-text">
+        <ul>Other links:</ul>
+        <li><a class="cv-link" href="https://drive.google.com/file/d/15Rbu76JGWYr97hAduqVjbbdDff9TojPh/view" target="_blank">CV</a></li>
+        <li><a class="cv-link" href="https://www.instagram.com/catherinejexdesigns">Art/ Graphic Design Instagram</a></li>
+    </div>
+
+    <div class="footer">
         <div class="footer-links">
             <a class="email" href="mailto:catherinerosemartin@gmail.com"><i class="fa-solid fa-envelope"></i></a>
             <a class="github" href="https://github.com/catherinejex/"><i class="fa-brands fa-square-github"></i>
@@ -93,6 +73,28 @@
             <a class="linkedin" href="https://www.linkedin.com/in/catherinerosemartin/"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     <div class="footer-copyright"><p class="footer-copyright">Catherine Martin, 2023</p></div>
-</div>
+
+    <script>
+        function openPopup(){
+            popup.classList.add('open-popup');
+        }
+        function closePopup(){
+            popup.classList.remove('open-popup');
+        }
+
+        function openPopupVen(){
+            popupven.classList.add('open-popupven');
+        }
+        function closePopupVen(){
+            popupven.classList.remove('open-popupven');
+        }
+
+        function openPopupBand(){
+            popupband.classList.add('open-popupband');
+        }
+        function closePopupBand(){
+            popupband.classList.remove('open-popupband');
+        }
+    </script>    
 </body>
 </html>
