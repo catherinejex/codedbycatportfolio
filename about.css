@@ -1,5 +1,6 @@
-body {background-color: black;
-overscroll-behavior: none;
+body {
+    background-color: black;
+    overscroll-behavior: none;
 }
 
 .me {
@@ -17,6 +18,7 @@ overscroll-behavior: none;
 .container {
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
 .about {
@@ -30,8 +32,9 @@ overscroll-behavior: none;
 .text {
     color: #FFFFFF;
     font-family: 'Raleway'; 
-    text-align: center;
+    text-align: left;
     padding: 10px 50px;
+    height: fit-content;
 }
 
 .bckgd {
@@ -47,7 +50,7 @@ overscroll-behavior: none;
     font-weight: 700;
     font-size: 100px;
     text-transform: uppercase;
-    padding-top: 150px;
+    padding: 100px 7px 0 5px;
     margin-bottom: 0;
     position: relative;
     text-shadow: 0.05em 0 0 rgba(0, 0, 0, 0.75),
@@ -141,7 +144,6 @@ overscroll-behavior: none;
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);
     background-size: cover;
     background-position: center;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -211,4 +213,22 @@ overscroll-behavior: none;
 .email:hover {
     transform: scale(1.3);
     color: #D84C40;
+}
+
+@media (min-width: 900px) {
+    .container {
+    flex-direction: row;
+    }
+    .footer {
+        position: fixed;
+    }
+}
+
+@media (max-width: 100px) {
+    .container {
+    flex-direction: column;
+    }
+    .footer {
+        position: relative;
+    }
 }
