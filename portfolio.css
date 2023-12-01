@@ -4,6 +4,7 @@ body {
     box-sizing: border-box;
     font-family: 'Raleway';
     background-color: black;
+    overscroll-behavior: none;
 }
 
 .bckgd-port {
@@ -14,6 +15,7 @@ body {
 
 .container {
     height: 32vh !important;
+    margin-top: 152px;
 }
 
 .text {
@@ -22,10 +24,25 @@ body {
     text-align: center;
 }
 
+.cv-link a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+.cv-link li {
+    color: white;
+    list-style: none;
+}
+
 .portfolio-text {
     color: #FFFFFF;
     font-family: 'Raleway', sans-serif;
     text-align: center;
+    list-style: none;
+    text-decoration: none;
+    padding-top: 100px;
 }
 
 .glitch-portfolio {
@@ -137,6 +154,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
     padding-top: 30px;
+    align-content: center;
 }
 
 .card-category {
@@ -307,6 +325,57 @@ h2 {
     object-fit: cover;
 }
 
+.popupmbf {
+    width: 500px;
+    background: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popupmbf {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popupmbf.open-popupmbf {
+    display: block;
+}
+
+.popupmbf button {
+    width: 50%;
+    margin-top: 20px;
+    padding: 10x 0;
+    background: #2a7ca1bf;
+    color: white;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popupmbf a {
+    text-decoration: none;
+    color: black;
+}
+
+.mbf img {
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+    border-radius: 5px;
+    height: 230px;
+    object-fit: cover;
+}
+
 .glitch {
     color: #f5f1ed;
     font-family: 'Poiret One';
@@ -385,7 +454,7 @@ h2 {
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);
     background-size: cover;
     background-position: center;
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -462,31 +531,23 @@ h2 {
     .cards {
         grid-template-columns: 1fr;
     }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-    .cards {
+    .card-category {
         grid-template-columns: 1fr;
     }
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
+@media (min-width: 400px) {
     .cards {
         grid-template-columns: 1fr 1fr;
     }
-    .bckgd-port {
-        padding-bottom: 116px;
+    .card-category {
+        grid-template-columns: 1fr;
     }
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-.cards {
+@media (min-width: 990px) {
+    .cards {
         grid-template-columns: 1fr 1fr 1fr;
-    }
-    .bckgd-port {
-        padding-bottom: 116px;
     }
 }

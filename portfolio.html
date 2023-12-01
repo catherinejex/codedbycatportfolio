@@ -64,6 +64,18 @@
                         <br>
                         <button type="button" onclick="closePopupBand()">Close</button>
                     </div>
+
+                    <div class="card-category mbf">
+                        <img src="mbf.jpg" alt="mbf" onclick='openPopupMbf()'>
+                        <p class="text-card"></p>
+                    </div>
+                    <div class="popupmbf" id="popupmbf">
+                        <h2>mbf.</h2>
+                        <p>This is a mockup in Figma for mbf., an insurance company that requested some mockups for a complete design rebrand.</p>
+                        <a href="https://www.figma.com/proto/a69USWsb9T75VkO0VNqQ6B/mbf.-second-copy?page-id=0%3A1&node-id=0-1&t=6bXdq34CD2hoJdwW-1">Click to visit</a>
+                        <br>
+                        <button type="button" onclick="closePopupMbf()">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,8 +83,7 @@
     <div class="portfolio-text">
         <h1 class="glitch">
             <span aria-hidden="true">Other Links:</span>Other Links:</h1>
-        <li><a class="cv-link" href="https://drive.google.com/file/d/15Rbu76JGWYr97hAduqVjbbdDff9TojPh/view" target="_blank">CV</a></li>
-        <li><a class="cv-link" href="https://www.instagram.com/catherinejexdesigns">Art/ Graphic Design Instagram</a></li>
+        <li class="cv-link"><a class="cv-link" href="https://drive.google.com/file/d/15Rbu76JGWYr97hAduqVjbbdDff9TojPh/view" target="_blank">CV</a></li>
     </div>
 
     <div class="footer">
@@ -104,6 +115,13 @@
         }
         function closePopupBand(){
             popupband.classList.remove('open-popupband');
+        }
+
+        function openPopupMbf(){
+            popupmbf.classList.add('open-popupmbf');
+        }
+        function closePopupMbf(){
+            popupmbf.classList.remove('open-popupmbf');
         }
     </script>    
 </body>
