@@ -14,8 +14,8 @@ body {
 }
 
 .container {
-    height: 32vh !important;
     margin-top: 152px;
+    height: 32vh !important;
 }
 
 .text {
@@ -29,11 +29,16 @@ body {
     text-decoration: none;
     list-style: none;
     padding-bottom: 20px;
+    font-size: 20px;
 }
 
 .cv-link li {
     color: white;
     list-style: none;
+}
+
+.cv-link {
+    margin-bottom: 32px;
 }
 
 .portfolio-text {
@@ -150,10 +155,11 @@ body {
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    grid-template-columns: 3fr;
+    flex-wrap: wrap;
     grid-gap: 30px;
-    padding-top: 30px;
     align-content: center;
 }
 
@@ -526,28 +532,3 @@ h2 {
     color: #D84C40;
 }
 
-// Smallest device
-@media (min-width: 100px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
-    .card-category {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (min-width: 400px) {
-    .cards {
-        grid-template-columns: 1fr 1fr;
-    }
-    .card-category {
-        grid-template-columns: 1fr;
-    }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 990px) {
-    .cards {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
