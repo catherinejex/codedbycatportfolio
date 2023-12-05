@@ -158,7 +158,6 @@ body {
     display: flex;
     justify-content: center;
     grid-template-columns: 3fr;
-    flex-wrap: wrap;
     grid-gap: 30px;
     align-content: center;
 }
@@ -532,3 +531,33 @@ h2 {
     color: #D84C40;
 }
 
+// Smallest device
+@media (min-width: 100px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bckgd-port {
+    padding-bottom: 116px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
