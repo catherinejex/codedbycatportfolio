@@ -80,7 +80,7 @@ body {
     opacity: 0.8;
 }
 
-@keyframes .glitch-portfolio {
+@keyframes glitch-portfolio {
     0% {
     text-shadow: 0.05em 0 0 rgba(0, 0, 0, 0.75),
     -0.025em -0.05em 0 rgba(120, 120, 120, 0.75),
@@ -523,21 +523,20 @@ h2 {
     color: #D84C40;
 }
 
-// Smallest device
 @media (min-width: 100px) {
 §.cards {
     grid-template-columns: 1fr;
     }
 }
 
-// Small devices (landscape phones, 576px and up)
+
 @media (min-width: 576px) {
     .cards {
     grid-template-columns: 1fr;
     }
 }
 
-// Medium devices (tablets, 768px and up)
+
 @media (min-width: 768px) {
     .cards {
         grid-template-columns: 1fr 1fr;
@@ -547,7 +546,7 @@ h2 {
     }
 }
 
-// Large devices (desktops, 992px and up)
+
 @media (min-width: 992px) {
     .container .cards {
     grid-template-columns: 1fr 1fr 1fr;
